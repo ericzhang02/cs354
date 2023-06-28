@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main( int argc, char **argv ) {              
+
+	// TODO: Check if number of command-line arguments is correct.
+	if (argc!=5){
+		printf("Invalid number of CLAs\n");
+		exit(1);
+	}
+	
+    int n = atoi(argv[1]);
+    int mInitial = atoi(argv[1]);
+    int m = atoi(argv[1]);
+    int b = atoi(argv[1]);
+
+    printf("%d",mInitial);
+
+    for (int i = 1; i < n; i++){
+        int temp = mInitial*m+b;
+        printf(",%d",temp);
+        mInitial = temp;
+    }
+    printf("\n")
+
+	return 0;       
+}
